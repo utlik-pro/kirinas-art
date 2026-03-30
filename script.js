@@ -165,11 +165,29 @@ document.querySelectorAll('.about__stat-number').forEach(el => {
     counterObserver.observe(el);
 });
 
-// ===== FORM =====
+// ===== FORM — SEND LEAD TO TELEGRAM =====
 document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const name = document.getElementById('formName').value.trim();
+    const phone = document.getElementById('formPhone').value.trim();
+    const instagram = document.getElementById('formInstagram').value.trim();
+    const message = document.getElementById('formMessage').value.trim();
+
+    const lines = [
+        `Новая заявка с сайта Kirinas Art`,
+        ``,
+        `Имя: ${name}`,
+        `Телефон: ${phone}`,
+        instagram ? `Instagram: @${instagram.replace('@', '')}` : '',
+        message ? `Сообщение: ${message}` : ''
+    ].filter(Boolean).join('\n');
+
+    // Open Telegram with pre-filled message
+    window.open(`https://t.me/kirinas_artist?text=${encodeURIComponent(lines)}`, '_blank');
+
     const btn = e.target.querySelector('.contact__submit');
-    btn.textContent = 'ОТПРАВЛЕНО';
+    btn.textContent = 'ЗАЯВКА ОТПРАВЛЕНА';
     btn.style.background = 'rgba(45, 90, 62, 0.8)';
     btn.style.borderColor = 'var(--gold)';
     setTimeout(() => {
