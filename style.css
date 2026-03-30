@@ -471,30 +471,94 @@ body > *:not(.particles-canvas) {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .process__steps { grid-template-columns: repeat(2, 1fr); }
-    .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery__grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
 
 @media (max-width: 768px) {
+    /* Nav */
     .nav {
         display: none; position: fixed; inset: 0;
         background: rgba(6, 11, 6, 0.98);
         flex-direction: column; align-items: center; justify-content: center;
-        gap: 32px; z-index: 99;
+        gap: 28px; z-index: 99;
     }
     .nav.active { display: flex; }
-    .nav__link { font-size: 16px; letter-spacing: 4px; }
+    .nav__link { font-size: 15px; letter-spacing: 3px; }
     .burger { display: flex; z-index: 101; }
     .burger.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
     .burger.active span:nth-child(2) { opacity: 0; }
     .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
 
-    .hero__painting { max-width: 320px; }
-    .about__grid { grid-template-columns: 1fr; gap: 48px; }
-    .testimonials__grid { grid-template-columns: 1fr; }
-    .contact__grid { grid-template-columns: 1fr; gap: 48px; }
-    .gallery__grid { grid-template-columns: 1fr; }
+    /* Header */
+    .header { padding: 14px 0; }
+    .logo { font-size: 28px; }
+    .logo__a { font-size: 24px; }
+
+    /* Hero */
+    .hero { min-height: auto; padding: 0; }
+    .hero__content { padding: 90px 20px 50px; }
+    .hero__painting { max-width: 260px; margin-bottom: 30px; }
+    .hero__title { font-size: 26px; letter-spacing: 3px; margin-bottom: 16px; }
+    .hero__subtitle { font-size: 11px; letter-spacing: 2.5px; margin-bottom: 32px; }
+    .btn-cta { font-size: 12px; padding: 14px 28px; letter-spacing: 2px; }
+    .hero__sparkle { display: none; }
+
+    /* Sections */
+    .gallery, .process, .about, .testimonials, .contact { padding: 70px 0; }
+    .cta-section { padding: 60px 0; }
+
+    .section-header { flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .section-header__title { font-size: 18px; letter-spacing: 2.5px; white-space: normal; text-align: center; }
+    .section-header__line { width: 40px; }
+    .section-desc { font-size: 16px; margin-bottom: 36px; }
+
+    /* Gallery */
+    .gallery__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .gallery__caption { font-size: 13px; margin-top: 8px; opacity: 1; transform: none; }
+
+    /* Process */
+    .process__steps { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .process__step { padding: 24px 16px; }
+    .process__number { font-size: 30px; margin-bottom: 10px; }
+    .process__step-title { font-size: 16px; margin-bottom: 10px; }
+    .process__step-text { font-size: 14px; }
+
+    /* About */
+    .about__grid { grid-template-columns: 1fr; gap: 36px; }
+    .about__img { max-width: 300px; margin: 0 auto; }
+    .about__text { font-size: 17px; }
+    .about__stats { gap: 20px; justify-content: center; }
+    .about__stat-number { font-size: 30px; }
+    .about__stat-label { font-size: 11px; }
+
+    /* Testimonials */
+    .testimonials__grid { grid-template-columns: 1fr; gap: 20px; }
+    .testimonials__item { padding: 28px 24px; }
+    .testimonials__quote { font-size: 16px; }
+
+    /* CTA */
+    .cta-section__inner { padding: 48px 24px; }
+    .cta-section__title { font-size: 22px; letter-spacing: 3px; }
+    .cta-section__text { font-size: 16px; margin-bottom: 28px; }
+
+    /* Contact */
+    .contact__grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact__field input,
+    .contact__field textarea { font-size: 15px; padding: 14px 16px; }
+    .contact__submit { font-size: 13px; padding: 16px 24px; letter-spacing: 2px; }
+
+    /* Footer */
+    .footer { padding: 40px 0 30px; }
+    .footer__links { gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .footer__links a { font-size: 11px; }
+}
+
+@media (max-width: 400px) {
+    .hero__painting { max-width: 220px; }
+    .hero__title { font-size: 22px; letter-spacing: 2px; }
+    .hero__subtitle { font-size: 10px; letter-spacing: 2px; }
+    .gallery__grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .gallery__caption { font-size: 11px; }
     .process__steps { grid-template-columns: 1fr; }
-    .about__stats { gap: 24px; }
-    .section-header { flex-wrap: wrap; }
-    .section-header__title { font-size: 20px; letter-spacing: 3px; }
+    .section-header__title { font-size: 16px; letter-spacing: 2px; }
 }
