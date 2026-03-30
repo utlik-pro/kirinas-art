@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karina's Art — Эксклюзивные картины на заказ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated background particles -->
+    <canvas id="particles" class="particles-canvas"></canvas>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="logo">
+                <span class="logo__k">K</span><span class="logo__a">A</span>
+            </a>
+            <nav class="nav">
+                <a href="#gallery" class="nav__link">ГАЛЕРЕЯ</a>
+                <a href="#process" class="nav__link">ПРОЦЕСС</a>
+                <a href="#about" class="nav__link">О НАС</a>
+                <a href="#portfolio" class="nav__link">ОТЗЫВЫ</a>
+                <a href="#contact" class="nav__link">КОНТАКТЫ</a>
+            </nav>
+            <button class="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero__bg-overlay"></div>
+        <div class="hero__sparkle hero__sparkle--1">✦</div>
+        <div class="hero__sparkle hero__sparkle--2">✦</div>
+        <div class="hero__sparkle hero__sparkle--3">✦</div>
+        <div class="hero__sparkle hero__sparkle--4">✦</div>
+        <div class="hero__sparkle hero__sparkle--5">✦</div>
+
+        <div class="hero__content">
+            <div class="hero__painting" data-parallax="0.05">
+                <img src="images/oil-hero.jpg" alt="Портрет маслом на заказ" class="hero__painting-img">
+            </div>
+            <h1 class="hero__title">СОЗДАЁМ ИСКУССТВО,<br>КОТОРОЕ ЖИВЁТ ВЕЧНО</h1>
+            <p class="hero__subtitle">ЭКСКЛЮЗИВНЫЕ КАРТИНЫ РУЧНОЙ РАБОТЫ НА ЗАКАЗ ДЛЯ ЦЕНИТЕЛЕЙ</p>
+            <a href="#contact" class="btn-cta">ОФОРМИТЬ ПЕРСОНАЛЬНЫЙ ЗАКАЗ</a>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header__line"></div>
+                <h2 class="section-header__title">ГАЛЕРЕЯ РАБОТ</h2>
+                <div class="section-header__line"></div>
+            </div>
+            <p class="section-desc">Каждая картина — уникальное произведение, созданное с вниманием к деталям и любовью к искусству</p>
+
+            <div class="gallery__grid">
+                <div class="gallery__item">
+                    <img src="images/oil-hero.jpg" alt="Портрет пары маслом" class="gallery__img" data-parallax="0.03">
+                    <p class="gallery__caption">«Вечерний свет» — холст, масло, 80×100</p>
+                </div>
+                <div class="gallery__item">
+                    <img src="images/oil-landscape.jpg" alt="Пейзаж Тоскана" class="gallery__img" data-parallax="0.03">
+                    <p class="gallery__caption">«Тоскана» — холст, масло, 60×80</p>
+                </div>
+                <div class="gallery__item">
+                    <img src="images/oil-woman.jpg" alt="Женский портрет" class="gallery__img" data-parallax="0.03">
+                    <p class="gallery__caption">«Грация» — холст, масло, 70×90</p>
+                </div>
+                <div class="gallery__item">
+                    <img src="images/oil-family.jpg" alt="Семейный портрет" class="gallery__img" data-parallax="0.03">
+                    <p class="gallery__caption">«Династия» — холст, масло, 100×120</p>
+                </div>
+                <div class="gallery__item">
+                    <img src="images/oil-venice.jpg" alt="Венеция" class="gallery__img" data-parallax="0.03">
+                    <p class="gallery__caption">«Венеция» — холст, масло, 80×60</p>
+                </div>
+                <div class="gallery__item">
+                    <img src="images/oil-stilllife.jpg" alt="Натюрморт" class="gallery__img" data-parallax="0.03">
+                    <p class="gallery__caption">«Золотой час» — холст, масло, 70×90</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header__line"></div>
+                <h2 class="section-header__title">ПРОЦЕСС СОЗДАНИЯ</h2>
+                <div class="section-header__line"></div>
+            </div>
+            <p class="section-desc">От идеи до готового шедевра — каждый этап наполнен вниманием и мастерством</p>
+
+            <div class="process__steps">
+                <div class="process__step">
+                    <div class="process__number">01</div>
+                    <div class="process__icon">✦</div>
+                    <h3 class="process__step-title">Консультация</h3>
+                    <p class="process__step-text">Обсуждаем вашу идею, стиль, размер и цветовую палитру. Подбираем референсы и определяем концепцию будущей работы.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">02</div>
+                    <div class="process__icon">✦</div>
+                    <h3 class="process__step-title">Эскиз</h3>
+                    <p class="process__step-text">Создаём детальный эскиз и согласовываем композицию. Вносим правки до полного утверждения.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">03</div>
+                    <div class="process__icon">✦</div>
+                    <h3 class="process__step-title">Написание</h3>
+                    <p class="process__step-text">Художник работает над картиной, отправляя фото-отчёты на каждом этапе. Вы видите, как рождается шедевр.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">04</div>
+                    <div class="process__icon">✦</div>
+                    <h3 class="process__step-title">Доставка</h3>
+                    <p class="process__step-text">Бережная упаковка и доставка в любую точку мира. Картина готова украсить ваш интерьер.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image">
+                    <img src="images/artist-framed.jpg" alt="Художник за работой" class="about__img" data-parallax="0.04">
+                </div>
+                <div class="about__content">
+                    <div class="section-header section-header--left">
+                        <h2 class="section-header__title">О ХУДОЖНИКЕ</h2>
+                        <div class="section-header__line"></div>
+                    </div>
+                    <p class="about__text">
+                        Каждая работа — это не просто картина, а история, рассказанная кистью и красками.
+                        Более 10 лет опыта в создании портретов и интерьерных картин позволяют воплощать
+                        самые смелые идеи в жизнь.
+                    </p>
+                    <p class="about__text">
+                        Работаю с маслом, акрилом и смешанными техниками. Каждый заказ — это индивидуальный
+                        подход и полное погружение в ваше видение.
+                    </p>
+                    <div class="about__stats">
+                        <div class="about__stat">
+                            <span class="about__stat-number">200+</span>
+                            <span class="about__stat-label">Работ создано</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number">10+</span>
+                            <span class="about__stat-label">Лет опыта</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number">50+</span>
+                            <span class="about__stat-label">Городов доставки</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header__line"></div>
+                <h2 class="section-header__title">ОТЗЫВЫ КЛИЕНТОВ</h2>
+                <div class="section-header__line"></div>
+            </div>
+
+            <div class="testimonials__grid">
+                <div class="testimonials__item">
+                    <div class="testimonials__quote">«Картина превзошла все ожидания. Каждый гость останавливается и восхищается работой. Это настоящее произведение искусства.»</div>
+                    <div class="testimonials__author">— Анна М., Москва</div>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__quote">«Заказывал семейный портрет в подарок родителям на годовщину. Слёзы счастья — лучшая награда. Спасибо за волшебство!»</div>
+                    <div class="testimonials__author">— Дмитрий К., Санкт-Петербург</div>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__quote">«Профессионализм на каждом этапе. От первого эскиза до готовой работы — всё было идеально. Уже заказываю вторую картину.»</div>
+                    <div class="testimonials__author">— Елена В., Дубай</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-section__inner">
+                <h2 class="cta-section__title">ГОТОВЫ СОЗДАТЬ<br>СВОЙ ШЕДЕВР?</h2>
+                <p class="cta-section__text">Оставьте заявку и мы свяжемся с вами для обсуждения вашей идеи</p>
+                <a href="#contact" class="btn-cta">ОБСУДИТЬ ПРОЕКТ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header__line"></div>
+                <h2 class="section-header__title">СВЯЗАТЬСЯ С НАМИ</h2>
+                <div class="section-header__line"></div>
+            </div>
+
+            <div class="contact__grid">
+                <form class="contact__form" id="contactForm">
+                    <div class="contact__field">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="contact__field">
+                        <input type="tel" placeholder="Телефон">
+                    </div>
+                    <div class="contact__field">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="contact__field">
+                        <textarea placeholder="Расскажите о вашей идее..." rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="contact__submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+                </form>
+
+                <div class="contact__info">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">✦</div>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+7 (999) 123-45-67</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">✦</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@karinasart.ru</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">✦</div>
+                        <div>
+                            <h4>Социальные сети</h4>
+                            <p>Instagram / Telegram</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">✦</div>
+                        <div>
+                            <h4>Студия</h4>
+                            <p>По предварительной записи</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <a href="#" class="logo">
+                    <span class="logo__k">K</span><span class="logo__a">A</span>
+                </a>
+                <p class="footer__text">Karina's Art — эксклюзивные картины ручной работы</p>
+                <div class="footer__links">
+                    <a href="#gallery">Галерея</a>
+                    <a href="#process">Процесс</a>
+                    <a href="#about">О нас</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+                <p class="footer__copy">&copy; 2026 Karina's Art. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
