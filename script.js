@@ -133,7 +133,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll(
-    '.gallery__item, .process__step, .about__content, .about__image, .testimonials__item, .cta-section__inner, .contact__form, .contact__info'
+    '.gallery__item, .process__step, .about__content, .about__image, .testimonials__item, .cta-section__inner, .contact__form, .contact__info, .timeline__item, .categories__item'
 ).forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
